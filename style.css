@@ -14,6 +14,10 @@ body{
     height : 100%;
 }
 
+
+
+/* header css ******************************************************************************************************/
+
 header{
     height : 60vh;
     /* border : 1px solid black; */
@@ -21,16 +25,6 @@ header{
     padding : 10px;
     position: relative;
 
-}
-
-main{
-    min-height : 30vh;
-}
-
-footer{
-    height : 10vh;
-    border : 1px solid black;
-    box-sizing: border-box;
 }
 
 .fond_head{
@@ -75,15 +69,62 @@ font-weight: 100;
 }
 
 .icone_head{
+    box-sizing: border-box;
     margin-top : 3em;
     width : 3em;
     height : 3em;
-    background-image: url('images/hamburger.png');
-    background-size: contain;
+    transition : all 1s ease 0s;
+    
+    
 
 }
 
+
+.text_bienvenue {
+    font-size : 0px;
+    width : 0%;
+    height : 0%;
+    white-space: nowrap;
+    opacity: 1;
+    font-family: var(--primary-font);
+    
+
+}
+
+
+
+.trait1{
+    width : 90%;
+    border-top: 3px solid black;
+    position: relative;
+    transition : 1s ease;
+    margin-bottom : 8px;
+
+}
+
+.trait2{
+    width : 60%;
+    border-top: 3px solid black;
+    position: relative;
+    transition : 1s ease;
+    margin-bottom : 8px;
+
+    
+}
+
+.trait3{
+    width : 30%;
+    border-top: 3px solid black;
+    position: relative;
+    transition : 1s ease;
+}
+
+
+/* main css ******************************************************************************************************/
+
+
 main{
+    min-height : 30vh;
     background-color : var(--primary-color);
     height : 250vh;
     padding-top : 2em;
@@ -273,4 +314,17 @@ transition: left 1s ease;
     font-family: var(--primary-font);
     font-size: 1.6em;
     transition: left 1s ease;
+}
+
+/* footer css ******************************************************************************************************/
+
+
+footer{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--primary-font);
+    height : 10vh;
+    box-sizing: border-box;
+    background-color: var(--secondary-color);
 }
