@@ -1,5 +1,5 @@
 /* import of font family */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap');
 
 
 html{
@@ -44,7 +44,7 @@ footer{
 }
 
 .ellipse_head{
-    /* border: 1px solid black; */
+   
     height : 30%;
     width: 100%;
     border-radius: 50%;
@@ -205,12 +205,72 @@ main{
 
 .paragraphes_carrousel1{
     height : 40%;
+   width : 600%;
+    display: flex;
+    position: relative;
+    right : 0%;
+    transition: right 1s ease;
 }
+
+.paragraphes_carrousel1 div{
+    
+   
+    height : 100%;
+   width : 100%;
+   
+}
+
+
+
 
 .paragraphes_carrousel2{
     height : 40%;
+    width : 600%;
+     display: flex;
+     position: relative;
+     right : 0%;
+     transition: right 1s ease;
+}
+
+.paragraphes_carrousel2 div{
+    
+   
+    height : 100%;
+   width : 100%;
+   
 }
 
 .paragraphes_carrousel3{
     height : 40%;
+    width : 600%;
+     display: flex;
+     position: relative;
+     right : 0%;
+     transition: right 1s ease;
+}
+
+.paragraphes_carrousel3 div{
+    
+   
+    height : 100%;
+   width : 100%;
+    
+}
+
+.prenom{
+    position: relative;
+top : 20%;
+left : 15%;
+font-family: var(--primary-font);
+font-size: 1.6em;
+transition: left 1s ease;
+}
+
+.age{
+    position: relative;
+    top : 60%;
+    left: 50%;
+    font-family: var(--primary-font);
+    font-size: 1.6em;
+    transition: left 1s ease;
 }
