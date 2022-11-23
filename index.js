@@ -13,10 +13,15 @@ let prenoms_left = 15;
 let age_left = 50;
 fleche_droite.addEventListener('click', right_move);
 fleche_gauche.addEventListener('click', left_move);
+let index = 1;
+let description1 = document.getElementsByClassName('description1');
+let description2 = document.getElementsByClassName('description2');
 
 // 1er carrousel
 
 function right_move(){
+
+
 
     // si la position right de mes images est inferieur à 630% alors lorsque je clique sur la fleche droite on ajoute 105%
     if(right_movee < 500){
@@ -37,7 +42,8 @@ function right_move(){
             ages[i].style.left = age_left.toString() + '%';
             
         }
-        
+// pour chaque lettre de chaque paragraphe j'ajoute une classe 
+
     }
 }
 
@@ -102,6 +108,8 @@ function right_move2(){
             ages2[i].style.left = age_left2.toString() + '%';
             
         }
+
+        
         
     }
 }
@@ -227,3 +235,7 @@ function animation_trait(){
 
 
 }
+
+
+
+

@@ -300,7 +300,7 @@ main{
 
 .prenom{
     position: relative;
-top : 20%;
+top : 10%;
 left : 15%;
 font-family: var(--primary-font);
 font-size: 1.6em;
@@ -309,12 +309,193 @@ transition: left 1s ease;
 
 .age{
     position: relative;
-    top : 60%;
+    top : 30%;
     left: 50%;
     font-family: var(--primary-font);
     font-size: 1.6em;
     transition: left 1s ease;
 }
+
+.description{
+    position: relative;
+    top : 20%;
+    font-family: var(--primary-font);
+    font-size : 0.8em;
+    
+}
+
+.apparition1{
+opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 125ms;
+    animation-fill-mode: both;
+}
+
+.apparition2{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 250ms;
+    animation-fill-mode: both;
+}
+
+.apparition3{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 375ms;
+    animation-fill-mode: both;
+}
+
+.apparition4{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 500ms;
+    animation-fill-mode: both;
+}
+.apparition5{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 750ms;
+    animation-fill-mode: both;
+}
+.apparition6{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 1000ms;
+    animation-fill-mode: both;
+}
+.apparition7{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 1250ms;
+    animation-fill-mode: both;
+}
+.apparition8{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 1500ms;
+    animation-fill-mode: both;
+}
+.apparition9{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 1750ms;
+    animation-fill-mode: both;
+}
+.apparition10{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 2000ms;
+    animation-fill-mode: both;
+}
+.apparition11{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 2250ms;
+    animation-fill-mode: both;
+}
+.apparition12{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 2500ms;
+    animation-fill-mode: both;
+}
+.apparition13{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 2750ms;
+    animation-fill-mode: both;
+}
+.apparition14{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 3000ms;
+    animation-fill-mode: both;
+}
+.apparition15{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 3250ms;
+    animation-fill-mode: both;
+}
+.apparition16{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 3500ms;
+    animation-fill-mode: both;
+}
+.apparition17{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 3750ms;
+    animation-fill-mode: both;
+}
+.apparition18{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 4000ms;
+    animation-fill-mode: both;
+}
+.apparition19{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 4250ms;
+    animation-fill-mode: both;
+}
+.apparition20{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 4500ms;
+    animation-fill-mode: both;
+}
+.apparition21{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 4750ms;
+    animation-fill-mode: both;
+}
+.apparition22{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 5000ms;
+    animation-fill-mode: both;
+}
+.apparition23{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 5250ms;
+    animation-fill-mode: both;
+}
+.apparition24{
+    opacity : 0;
+    animation-name: apparition;
+    animation-duration: 1s;
+    animation-delay: 5500ms;
+    animation-fill-mode: both;
+} 
+
 
 /* footer css ******************************************************************************************************/
 
@@ -327,4 +508,19 @@ footer{
     height : 10vh;
     box-sizing: border-box;
     background-color: var(--secondary-color);
+}
+
+
+/* animations  *********************************************************************************************************/
+
+@keyframes apparition{
+0% {
+    opacity : 0;
+}
+
+100% {
+    opacity : 1;
+}
+
+
 }
