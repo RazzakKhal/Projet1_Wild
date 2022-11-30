@@ -126,7 +126,7 @@ font-weight: 100;
 main{
     min-height : 30vh;
     background-color : var(--primary-color);
-    height : 250vh;
+    padding-bottom : 2em;
     padding-top : 2em;
 }
 
@@ -154,7 +154,8 @@ main{
     }
 
 .carrousel1{
-    height : 30%;
+    display : flex;
+    height : 80vh;
     width : 90%;
     margin : 0 auto;
     border-radius: 10px;
@@ -167,7 +168,8 @@ main{
 }
 
 .carrousel2{
-    height : 30%;
+    display : flex;
+    height : 80vh;
     width : 90%;
     margin : 0 auto;
     border-radius: 10px;
@@ -182,7 +184,8 @@ main{
 
 
 .carrousel3{
-    height : 30%;
+    display : flex;
+    height : 80vh;
     width : 90%;
     margin : 0 auto;
     border-radius: 10px;
@@ -193,137 +196,51 @@ main{
     position:relative;
 }
 
-#images_carrousel1{
+
+/* travail de refonte du carrousel */
+
+
+.card{
+   height : 100%;
+   margin-right : 15px;
+}
+
+.card img{
     height : 60%;
-   
-    display: flex;
-    position: relative;
-    right : 0%;
-    transition: right 1s ease;
-    
+    border-radius: 5%;
 }
 
-#images_carrousel1 img{
-    margin-right : 1em;
-    border-radius: 10px;
-    max-width : 100%;
-}
-
-
-#images_carrousel2{
-    height : 60%;
-   
-    display: flex;
-    position: relative;
-    right : 0%;
-    transition: right 1s ease;
-    
-}
-
-#images_carrousel2 img{
-    margin-right : 1em;
-    border-radius: 10px;
-    max-width : 100%;
-}
-
-
-#images_carrousel3{
-    height : 60%;
-   
-    display: flex;
-    position: relative;
-    right : 0%;
-    transition: right 1s ease;
-    
-}
-
-#images_carrousel3 img{
-    margin-right : 1em;
-    border-radius: 10px;
-    max-width : 100%;
-}
-
-
-.paragraphes_carrousel1{
-    height : 40%;
-   width : 600%;
-    display: flex;
-    position: relative;
-    right : 0%;
-    transition: right 1s ease;
-}
-
-.paragraphes_carrousel1 div{
-    
-   
-    height : 100%;
-   width : 100%;
-   
-}
-
-
-
-
-.paragraphes_carrousel2{
-    height : 40%;
-    width : 600%;
-     display: flex;
-     position: relative;
-     right : 0%;
-     transition: right 1s ease;
-}
-
-.paragraphes_carrousel2 div{
-    
-   
-    height : 100%;
-   width : 100%;
-   
-}
-
-.paragraphes_carrousel3{
-    height : 40%;
-    width : 600%;
-     display: flex;
-     position: relative;
-     right : 0%;
-     transition: right 1s ease;
-}
-
-.paragraphes_carrousel3 div{
-    
-   
-    height : 100%;
-   width : 100%;
-    
-}
-
-.prenom{
-    position: relative;
-top : 10%;
-left : 15%;
-font-family: var(--primary-font);
-font-size: 1.6em;
-transition: left 1s ease;
-}
-
-.age{
-    position: relative;
-    top : 30%;
-    left: 50%;
+.card .prenom{
+        position: relative;
+    top : 2%;
+    left : 15%;
     font-family: var(--primary-font);
     font-size: 1.6em;
     transition: left 1s ease;
-}
-
-.description{
-    position: relative;
-    top : 20%;
-    font-family: var(--primary-font);
-    font-size : 0.8em;
+    /* color : blue; */
+  
     
 }
 
+.card .description{
+    position: relative;
+    top : 6%;
+    font-family: var(--primary-font);
+    font-size : 0.8em;
+}
+
+.card .age{
+    /* color : red; */
+    position : relative;
+    top : 40px;
+    left : 120px;
+    font-family: var(--primary-font);
+    font-size: 1.4em;
+}
+
+
+
+/* animation des textes */
 .apparition1{
 opacity : 0;
     animation-name: apparition;
