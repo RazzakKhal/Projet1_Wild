@@ -25,6 +25,7 @@ flecheDroite.addEventListener('click', ()=>{
         ages1[i].style.fontSize = "0px";
         prenoms1[i].style.fontSize = "0px";
         descriptions1[i].style.fontSize = "0px";
+
         
         i++;
     }
@@ -48,6 +49,29 @@ flecheGauche.addEventListener('click', ()=>{
     
     });
 
+
+
+function descriptionCreation(){
+ // création d'un texte de description , je dois boucler de sorte à mettre chaque lettre dans un span
+        // je dois ensuite le mettre dans la bonne description à l'aide de la variable i
+
+        let textDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe ipsa doloremque earum quibusdam, consequatur repellendus, quasi eveniet corrupti maxime hic rem temporibus laudantium";
+        
+        for(let index=0; index < textDescription.length; index++){
+            
+                let lettre = document.createElement('span');
+                lettre.classList.add(`letter${index}`);
+                lettre.innerHTML = textDescription[index];
+                descriptions1[i].appendChild(lettre); // i fait référence au i déclaré en haut du carrousel 1 , il est l'index de la div
+                // dans laquelle on se trouve
+            
+        
+        }
+}
+
+descriptionCreation(); // je la lance pour afficher la premiere description sans avoir à cliquer
+flecheDroite.addEventListener('click', descriptionCreation); // je la lance à chaque clique sur la fleche droite
+       
 
 
 // carroussel 2
