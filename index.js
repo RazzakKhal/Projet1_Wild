@@ -24,8 +24,8 @@ function right_move(){
 
 
     // si la position right de mes images est inferieur à 630% alors lorsque je clique sur la fleche droite on ajoute 105%
-    if(right_movee < 500){
-        right_movee += 100;
+    if(right_movee < 425){
+        right_movee += 85;
         carrousel.style.right = right_movee.toString() + '%';
         paragraphes1.style.right = right_movee.toString() + '%';
         if(prenoms_left < 20){
@@ -50,7 +50,7 @@ function right_move(){
 function left_move(){
         // si la position right de mes images est supérieur à 0% alors lorsque je clique sur la fleche droite on enlève 105%
         if(right_movee > 0){
-            right_movee -= 100;
+            right_movee -= 85;
             carrousel.style.right = right_movee.toString() + '%';
             paragraphes1.style.right = right_movee.toString() + '%';
             if(prenoms_left < 20){
@@ -90,8 +90,8 @@ fleche_gauche2.addEventListener('click', left_move2);
 function right_move2(){
 
     // si la position right de mes images est inferieur à 630% alors lorsque je clique sur la fleche droite on ajoute 105%
-    if(right_movee2 < 500){
-        right_movee2 += 100;
+    if(right_movee2 < 425){
+        right_movee2 += 85;
         carrousel2.style.right = right_movee2.toString() + '%';
         paragraphes2.style.right = right_movee2.toString() + '%';
         if(prenoms_left2 < 20){
@@ -117,7 +117,7 @@ function right_move2(){
 function left_move2(){
         // si la position right de mes images est supérieur à 0% alors lorsque je clique sur la fleche droite on enlève 105%
         if(right_movee2 > 0){
-            right_movee2 -= 100;
+            right_movee2 -= 85;
             carrousel2.style.right = right_movee2.toString() + '%';
             paragraphes2.style.right = right_movee2.toString() + '%';
             if(prenoms_left2 < 20){
@@ -158,8 +158,8 @@ fleche_gauche3.addEventListener('click', left_move3);
 function right_move3(){
 
     // si la position right de mes images est inferieur à 630% alors lorsque je clique sur la fleche droite on ajoute 105%
-    if(right_movee3 < 500){
-        right_movee3 += 100;
+    if(right_movee3 < 425){
+        right_movee3 += 85;
         carrousel3.style.right = right_movee3.toString() + '%';
         paragraphes3.style.right = right_movee3.toString() + '%';
         if(prenoms_left3 < 20){
@@ -183,7 +183,7 @@ function right_move3(){
 function left_move3(){
         // si la position right de mes images est supérieur à 0% alors lorsque je clique sur la fleche droite on enlève 105%
         if(right_movee3 > 0){
-            right_movee3 -= 100;
+            right_movee3 -= 85;
             carrousel3.style.right = right_movee3.toString() + '%';
             paragraphes3.style.right = right_movee3.toString() + '%';
             if(prenoms_left3 < 20){

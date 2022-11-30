@@ -22,7 +22,7 @@ header{
     height : 60vh;
     /* border : 1px solid black; */
     box-sizing: border-box;
-    padding : 10px;
+    padding : 0.6em;
     position: relative;
 
 }
@@ -39,13 +39,13 @@ header{
 
 .ellipse_head{
    
-    height : 30%;
+    height : 40%;
     width: 100%;
     border-radius: 50%;
     position : absolute;
     z-index : 2;
     background-color: white;
-    bottom : 6em;
+    top : 9em;
     left : 0px;
 }
 
@@ -94,7 +94,7 @@ font-weight: 100;
 
 
 .trait1{
-    width : 90%;
+    width : 85%;
     border-top: 3px solid black;
     position: relative;
     transition : 1s ease;
