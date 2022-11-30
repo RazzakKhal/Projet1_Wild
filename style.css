@@ -69,8 +69,10 @@ font-weight: 100;
 }
 
 .icone_head{
+    position: relative;
     box-sizing: border-box;
-    margin-top : 3em;
+    /* margin-top : 3em; */
+    top : 60px;
     width : 3em;
     height : 3em;
     transition : all 1s ease 0s;
@@ -97,7 +99,6 @@ font-weight: 100;
     width : 85%;
     border-top: 3px solid black;
     position: relative;
-    transition : 1s ease;
     margin-bottom : 8px;
 
 }
@@ -105,8 +106,7 @@ font-weight: 100;
 .trait2{
     width : 60%;
     border-top: 3px solid black;
-    position: relative;
-    transition : 1s ease;
+    position: relative;  
     margin-bottom : 8px;
 
     
@@ -116,7 +116,7 @@ font-weight: 100;
     width : 30%;
     border-top: 3px solid black;
     position: relative;
-    transition : 1s ease;
+   
 }
 
 
@@ -240,179 +240,17 @@ main{
 
 
 
-/* animation des textes */
-.apparition1{
-opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 125ms;
-    animation-fill-mode: both;
+.youssef{
+    margin-left : 10px;
 }
 
-.apparition2{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 250ms;
-    animation-fill-mode: both;
+.nicolasf{
+    margin-left : 10px;
 }
 
-.apparition3{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 375ms;
-    animation-fill-mode: both;
+.eric2{
+    margin-left : 10px;
 }
-
-.apparition4{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 500ms;
-    animation-fill-mode: both;
-}
-.apparition5{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 750ms;
-    animation-fill-mode: both;
-}
-.apparition6{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 1000ms;
-    animation-fill-mode: both;
-}
-.apparition7{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 1250ms;
-    animation-fill-mode: both;
-}
-.apparition8{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 1500ms;
-    animation-fill-mode: both;
-}
-.apparition9{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 1750ms;
-    animation-fill-mode: both;
-}
-.apparition10{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 2000ms;
-    animation-fill-mode: both;
-}
-.apparition11{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 2250ms;
-    animation-fill-mode: both;
-}
-.apparition12{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 2500ms;
-    animation-fill-mode: both;
-}
-.apparition13{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 2750ms;
-    animation-fill-mode: both;
-}
-.apparition14{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 3000ms;
-    animation-fill-mode: both;
-}
-.apparition15{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 3250ms;
-    animation-fill-mode: both;
-}
-.apparition16{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 3500ms;
-    animation-fill-mode: both;
-}
-.apparition17{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 3750ms;
-    animation-fill-mode: both;
-}
-.apparition18{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 4000ms;
-    animation-fill-mode: both;
-}
-.apparition19{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 4250ms;
-    animation-fill-mode: both;
-}
-.apparition20{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 4500ms;
-    animation-fill-mode: both;
-}
-.apparition21{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 4750ms;
-    animation-fill-mode: both;
-}
-.apparition22{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 5000ms;
-    animation-fill-mode: both;
-}
-.apparition23{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 5250ms;
-    animation-fill-mode: both;
-}
-.apparition24{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 5500ms;
-    animation-fill-mode: both;
-} 
-
 
 /* footer css ******************************************************************************************************/
 
