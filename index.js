@@ -4,10 +4,12 @@
 
 const flecheDroite = document.querySelector('#fleche_droite');
 const flecheGauche = document.querySelector('#fleche_gauche');
-const cards1 = document.querySelectorAll('.card1');
+const cards1 = document.querySelectorAll('.card1'); // div contenant image description date et prénom
 const prenoms1 = document.querySelectorAll('.prenom1');
 const ages1 = document.querySelectorAll('.age1');
 const descriptions1 = document.querySelectorAll('.description1');
+let indexDescription = 0;
+let i = 0;
 
 for(let i = 0; i < cards1.length; i++){
     cards1[i].style.transition = 'all 0.5s ease';
@@ -17,8 +19,10 @@ for(let i = 0; i < cards1.length; i++){
 }
 
 
-let i = 0;
+
 flecheDroite.addEventListener('click', ()=>{
+
+    // carrousel
     if(i < cards1.length - 1){
         cards1[i].style.height = "0px";
         cards1[i].style.marginRight = "0px";
@@ -26,7 +30,11 @@ flecheDroite.addEventListener('click', ()=>{
         prenoms1[i].style.fontSize = "0px";
         descriptions1[i].style.fontSize = "0px";
 
-        
+    // je reinitialise l'index de description utilisé dans ma fonction descriptionCreation
+
+    indexDescription = 0;
+
+
         i++;
     }
 
@@ -51,26 +59,25 @@ flecheGauche.addEventListener('click', ()=>{
 
 
 
-function descriptionCreation(){
- // création d'un texte de description , je dois boucler de sorte à mettre chaque lettre dans un span
-        // je dois ensuite le mettre dans la bonne description à l'aide de la variable i
+    setInterval(descriptionCreation, 15);
 
-        let textDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe ipsa doloremque earum quibusdam, consequatur repellendus, quasi eveniet corrupti maxime hic rem temporibus laudantium";
+
+    
+function descriptionCreation(){
+ 
+    
+
+ let textDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe ipsa doloremque earum quibusdam, consequatur repellendus, quasi eveniet corrupti maxime hic rem temporibus laudantium";
         
-        for(let index=0; index < textDescription.length; index++){
-            
-                let lettre = document.createElement('span');
-                lettre.classList.add(`letter${index}`);
-                lettre.innerHTML = textDescription[index];
-                descriptions1[i].appendChild(lettre); // i fait référence au i déclaré en haut du carrousel 1 , il est l'index de la div
-                // dans laquelle on se trouve
-            
-        
+
+        if(indexDescription < textDescription.length){
+            descriptions1[i].innerHTML += textDescription[indexDescription];
+indexDescription++;
         }
 }
 
-descriptionCreation(); // je la lance pour afficher la premiere description sans avoir à cliquer
-flecheDroite.addEventListener('click', descriptionCreation); // je la lance à chaque clique sur la fleche droite
+
+// flecheDroite.addEventListener('click', ); // je la lance à chaque clique sur la fleche droite
        
 
 
