@@ -200,6 +200,7 @@ main{
 
 
 .card{
+    position: relative;
    height : 100%;
    margin-right : 15px;
 }
@@ -210,9 +211,9 @@ main{
 }
 
 .card .prenom{
-        position: relative;
-    top : 2%;
-    left : 15%;
+        position: absolute;
+    bottom : 30%;
+    left : 3%;
     font-family: var(--primary-font);
     font-size: 1.6em;
     transition: left 1s ease;
@@ -222,17 +223,17 @@ main{
 }
 
 .card .description{
-    position: relative;
-    top : 6%;
+    position: absolute;
+    bottom : 15%;
     font-family: var(--primary-font);
     font-size : 0.8em;
 }
 
 .card .age{
     /* color : red; */
-    position : relative;
-    top : 40px;
-    left : 120px;
+    position : absolute;
+    bottom : 3%;
+    right : 10%;
     font-family: var(--primary-font);
     font-size: 1.2em;
 }
