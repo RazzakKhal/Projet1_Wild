@@ -89,6 +89,7 @@ font-weight: 100;
     white-space: nowrap;
     opacity: 1;
     font-family: var(--primary-font);
+    text-align: center;
     
 
 }
@@ -128,8 +129,8 @@ main{
     background-color : var(--primary-color);
     padding-bottom : 2em;
     padding-top : 2em;
-    padding-left : 20px;
-    padding-right: 20px;
+    padding-left : 5px;
+    padding-right: 5px;
 }
 
 .fleche_droite{
@@ -217,14 +218,14 @@ main{
     font-family: var(--primary-font);
     font-size: 1.6em;
     transition: left 1s ease;
-    /* color : blue; */
+ 
   
     
 }
 
 .card .description{
     position: absolute;
-    bottom : 15%;
+    bottom : 12%;
     font-family: var(--primary-font);
     font-size : 0.8em;
 }
@@ -240,17 +241,7 @@ main{
 
 
 
-.youssef{
-    margin-left : 10px;
-}
 
-.nicolasf{
-    margin-left : 10px;
-}
-
-.eric2{
-    margin-left : 10px;
-}
 
 /* footer css ******************************************************************************************************/
 
@@ -286,6 +277,8 @@ footer{
 /* Mediaqueries *********************************************************************************************** */
 
 
+/* Ecrans tablettes */
+
 @media screen and (min-width : 768px){
 
 /* header */
@@ -307,13 +300,70 @@ footer{
         top : 20px;
     }
 
+
+
 }
+
+/* Portable format paysage */
+
+@media screen and (max-height : 350px){
+       /* header */
+     
+        
+    
+       header{
+        height : 75vh;
+       }
+       .ellipse_head{
+        display : none;
+    }
+
+    
+       .fond_head{
+        height: 80%;
+        overflow: hidden;
+    }
+
+    .photo_head{
+            
+        background-image: url('images/classe.png');
+       width : 100%;
+       height : 100%;
+    }
+
+    .icone_head{
+        top : 5px;
+    }
+
+      
+    /* corps */
+
+    main{
+        min-height: 15vh;
+       }
+
+    .description{
+        display : none;
+    }
+
+    .card .prenom{
+        bottom : 23%;
+    }
+
+
+}
+
+
+
+/* Ecran tablettes paysage */
 
 @media screen and (min-width : 992px){
 
     /* header */
  
-    
+    header{
+        padding : 0px;
+    }
 
         .photo_head{
             
@@ -324,3 +374,23 @@ footer{
 
     }
     
+    /* Ecran PC */
+
+@media screen and (min-width : 1200px){
+
+        /* header */
+     
+        
+    
+           header{
+            height : 75vh;
+           }
+
+           main{
+            min-height: 15vh;
+           }
+
+          
+    
+        }
+        
