@@ -8,7 +8,10 @@ const cards1 = document.querySelectorAll('.card1'); // div contenant image descr
 const prenoms1 = document.querySelectorAll('.prenom1');
 const ages1 = document.querySelectorAll('.age1');
 const descriptions1 = document.querySelectorAll('.description1');
-let indexDescription = 0;
+
+let indexDescription1 = 0;
+let indexDescription2 = 0;
+let indexDescription3 = 0;
 let i = 0;
 
 for(let i = 0; i < cards1.length; i++){
@@ -49,7 +52,7 @@ flecheGauche.addEventListener('click', ()=>{
         i--;
         cards1[i].style.height = "100%";
         cards1[i].style.marginRight = "15px";
-        ages1[i].style.fontSize = "1.4em";
+        ages1[i].style.fontSize = "1.2em";
     prenoms1[i].style.fontSize = "1.6em";
     descriptions1[i].style.fontSize = "0.8em";
     }
@@ -59,23 +62,30 @@ flecheGauche.addEventListener('click', ()=>{
 
 
 
-    setInterval(descriptionCreation, 15);
+        // toutes les 15millisecondes je lance ma fonction descriptionCreation qui permet d'ajouter lettre par lettre ma description
+
+        setInterval(descriptionCreation1, 15);
 
 
     
-function descriptionCreation(){
- 
-    
-
- let textDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe ipsa doloremque earum quibusdam, consequatur repellendus, quasi eveniet corrupti maxime hic rem temporibus laudantium";
+        function descriptionCreation1(){
+         
+            
         
-
-        if(indexDescription < textDescription.length){
-            descriptions1[i].innerHTML += textDescription[indexDescription];
-indexDescription++;
+         let textDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe ipsa doloremque earum quibusdam, consequatur repellendus, quasi eveniet corrupti maxime hic rem temporibus laudantium";
+                
+        // si la longueur de ma description écrite est inferieur à la longueur du texte total
+                if(descriptions1[i].innerText.length < textDescription.length){
+                // l'index de depart utilisé est égal à la longueur de ma description (si je change de div dans la carrousel l'index a pu
+                // être réinitialisé)
+                    indexDescription1 = descriptions1[i].innerHTML.length;
+        
+                    // j'injecte dans ma description les lettre correspondante
+                    descriptions1[i].innerHTML += textDescription[indexDescription1];
+                   
+        indexDescription1++;
+                }
         }
-}
-
 
 // flecheDroite.addEventListener('click', ); // je la lance à chaque clique sur la fleche droite
        
@@ -110,6 +120,10 @@ flecheDroite2.addEventListener('click', ()=>{
         prenoms2[j].style.fontSize = "0px";
         descriptions2[j].style.fontSize = "0px";
         
+         // je reinitialise l'index de description utilisé dans ma fonction descriptionCreation
+
+    indexDescription2 = 0;
+
         j++;
     }
 
@@ -124,13 +138,40 @@ flecheGauche2.addEventListener('click', ()=>{
         j--;
         cards2[j].style.height = "100%";
         cards2[j].style.marginRight = "15px";
-        ages2[j].style.fontSize = "1.4em";
+        ages2[j].style.fontSize = "1.2em";
     prenoms2[j].style.fontSize = "1.6em";
     descriptions2[j].style.fontSize = "0.8em";
     }
 
     
     });
+
+
+        // toutes les 15millisecondes je lance ma fonction descriptionCreation qui permet d'ajouter lettre par lettre ma description
+
+setInterval(descriptionCreation2, 15);
+
+
+    
+function descriptionCreation2(){
+ 
+    
+
+ let textDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe ipsa doloremque earum quibusdam, consequatur repellendus, quasi eveniet corrupti maxime hic rem temporibus laudantium";
+        
+// si la longueur de ma description écrite est inferieur à la longueur du texte total
+        if(descriptions2[j].innerText.length < textDescription.length){
+        // l'index de depart utilisé est égal à la longueur de ma description (si je change de div dans la carrousel l'index a pu
+        // être réinitialisé)
+            indexDescription2 = descriptions2[j].innerHTML.length;
+
+            // j'injecte dans ma description les lettre correspondante
+            descriptions2[j].innerHTML += textDescription[indexDescription2];
+           
+indexDescription2++;
+        }
+}
+
 
 
 // carroussel 3
@@ -162,6 +203,10 @@ flecheDroite3.addEventListener('click', ()=>{
         prenoms3[k].style.fontSize = "0px";
         descriptions3[k].style.fontSize = "0px";
         
+ // je reinitialise l'index de description utilisé dans ma fonction descriptionCreation
+
+ indexDescription3 = 0;
+
         k++;
     }
 
@@ -176,13 +221,46 @@ flecheGauche3.addEventListener('click', ()=>{
         k--;
         cards3[k].style.height = "100%";
         cards3[k].style.marginRight = "15px";
-        ages3[k].style.fontSize = "1.4em";
+        ages3[k].style.fontSize = "1.2em";
     prenoms3[k].style.fontSize = "1.6em";
     descriptions3[k].style.fontSize = "0.8em";
     }
 
     
     });
+
+        // toutes les 15millisecondes je lance ma fonction descriptionCreation qui permet d'ajouter lettre par lettre ma description
+
+        setInterval(descriptionCreation3, 15);
+
+
+    
+        function descriptionCreation3(){
+         
+            
+        
+         let textDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe ipsa doloremque earum quibusdam, consequatur repellendus, quasi eveniet corrupti maxime hic rem temporibus laudantium";
+                
+        // si la longueur de ma description écrite est inferieur à la longueur du texte total
+                if(descriptions3[k].innerText.length < textDescription.length){
+                // l'index de depart utilisé est égal à la longueur de ma description (si je change de div dans la carrousel l'index a pu
+                // être réinitialisé)
+                    indexDescription3 = descriptions3[k].innerHTML.length;
+        
+                    // j'injecte dans ma description les lettre correspondante
+                    descriptions3[k].innerHTML += textDescription[indexDescription3];
+                   
+        indexDescription3++;
+                }
+        }
+
+
+
+
+
+
+
+
 
     // Animation icone Menu *************************************************************************************************
 
