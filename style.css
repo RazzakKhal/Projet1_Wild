@@ -45,7 +45,7 @@ header{
     position : absolute;
     z-index : 2;
     background-color: white;
-    top : 9em;
+    top : 10.5em;
     left : 0px;
 }
 
@@ -72,7 +72,7 @@ font-weight: 100;
     position: relative;
     box-sizing: border-box;
     /* margin-top : 3em; */
-    top : 60px;
+    top : 75px;
     width : 3em;
     height : 3em;
     transition : all 1s ease 0s;
@@ -371,7 +371,9 @@ footer{
            width : 98%;
         }
     
-
+.icone_head{
+    padding-left: 10px;
+}
     }
     
     /* Ecran PC */
@@ -389,7 +391,12 @@ footer{
            main{
             min-height: 15vh;
            }
-
+           .photo_head{
+            
+            background-image: url('images/classe.png');
+        
+        }
+    
           
     
         }
