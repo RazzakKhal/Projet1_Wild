@@ -33,10 +33,6 @@ flecheDroite.addEventListener('click', ()=>{
         prenoms1[i].style.fontSize = "0px";
         descriptions1[i].style.fontSize = "0px";
 
-    // je reinitialise l'index de description utilisé dans ma fonction descriptionCreation
-
-    indexDescription = 0;
-
 
         i++;
     }
@@ -83,11 +79,11 @@ flecheGauche.addEventListener('click', ()=>{
                     // j'injecte dans ma description les lettre correspondante
                     descriptions1[i].innerHTML += textDescription[indexDescription1];
                    
-        indexDescription1++;
+ 
                 }
         }
 
-// flecheDroite.addEventListener('click', ); // je la lance à chaque clique sur la fleche droite
+
        
 
 
@@ -120,9 +116,6 @@ flecheDroite2.addEventListener('click', ()=>{
         prenoms2[j].style.fontSize = "0px";
         descriptions2[j].style.fontSize = "0px";
         
-         // je reinitialise l'index de description utilisé dans ma fonction descriptionCreation
-
-    indexDescription2 = 0;
 
         j++;
     }
@@ -168,7 +161,7 @@ function descriptionCreation2(){
             // j'injecte dans ma description les lettre correspondante
             descriptions2[j].innerHTML += textDescription[indexDescription2];
            
-indexDescription2++;
+
         }
 }
 
@@ -202,10 +195,7 @@ flecheDroite3.addEventListener('click', ()=>{
         ages3[k].style.fontSize = "0px";
         prenoms3[k].style.fontSize = "0px";
         descriptions3[k].style.fontSize = "0px";
-        
- // je reinitialise l'index de description utilisé dans ma fonction descriptionCreation
 
- indexDescription3 = 0;
 
         k++;
     }
@@ -250,7 +240,7 @@ flecheGauche3.addEventListener('click', ()=>{
                     // j'injecte dans ma description les lettre correspondante
                     descriptions3[k].innerHTML += textDescription[indexDescription3];
                    
-        indexDescription3++;
+       
                 }
         }
 
