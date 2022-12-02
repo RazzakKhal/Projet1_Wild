@@ -1,210 +1,258 @@
-// variables carrousel 1
+// carroussel 1
+
+// si je clique 1 fois sur la fleche droite, alors la height de ma div devient 0px, si je clique 2 fois sur la fleche, la width de la div 2 devient 0, ...
+
+const flecheDroite = document.querySelector('#fleche_droite');
+const flecheGauche = document.querySelector('#fleche_gauche');
+const cards1 = document.querySelectorAll('.card1'); // div contenant image description date et prénom
+const prenoms1 = document.querySelectorAll('.prenom1');
+const ages1 = document.querySelectorAll('.age1');
+const descriptions1 = document.querySelectorAll('.description1');
+
+let indexDescription1 = 0;
+let indexDescription2 = 0;
+let indexDescription3 = 0;
+let i = 0;
+
+for(let i = 0; i < cards1.length; i++){
+    cards1[i].style.transition = 'all 0.5s ease';
+    prenoms1[i].style.transition = 'all 0.5s ease';
+    ages1[i].style.transition = 'all 0.5s ease';
+    descriptions1[i].style.transition = 'all 0.5s ease';
+}
 
 
 
-const fleche_gauche = document.getElementById('fleche_gauche');
-const fleche_droite = document.getElementById('fleche_droite');
-const carrousel = document.getElementById('images_carrousel1');
-const paragraphes1 = document.getElementsByClassName('paragraphes_carrousel1')[0];
-const prenoms = document.getElementsByClassName('prenom1');
-const ages = document.getElementsByClassName('age1');
-let right_movee = 0;
-let prenoms_left = 15;
-let age_left = 50;
-fleche_droite.addEventListener('click', right_move);
-fleche_gauche.addEventListener('click', left_move);
-let index = 1;
-let description1 = document.getElementsByClassName('description1');
-let description2 = document.getElementsByClassName('description2');
+flecheDroite.addEventListener('click', ()=>{
 
-// 1er carrousel
-
-function right_move(){
+    // carrousel
+    if(i < cards1.length - 1){
+        cards1[i].style.height = "0px";
+        cards1[i].style.marginRight = "0px";
+        ages1[i].style.fontSize = "0px";
+        prenoms1[i].style.fontSize = "0px";
+        descriptions1[i].style.fontSize = "0px";
 
 
+        i++;
+    }
 
-    // si la position right de mes images est inferieur à 630% alors lorsque je clique sur la fleche droite on ajoute 105%
-    if(right_movee < 425){
-        right_movee += 85;
-        carrousel.style.right = right_movee.toString() + '%';
-        paragraphes1.style.right = right_movee.toString() + '%';
-        if(prenoms_left < 20){
-            prenoms_left += 45;
-            age_left -= 30;
-        }else{
-            prenoms_left -= 45;
-            age_left += 30;
+});
+
+// si je clique 1 fois sur la fleche gauche, alors la height de ma div devient initial, si je clique 2 fois sur la fleche, la width de la div 2 devient initial, ...
+
+
+
+flecheGauche.addEventListener('click', ()=>{
+    if(i > 0){
+        i--;
+        cards1[i].style.height = "100%";
+        cards1[i].style.marginRight = "15px";
+        ages1[i].style.fontSize = "1.2em";
+    prenoms1[i].style.fontSize = "1.6em";
+    descriptions1[i].style.fontSize = "0.8em";
+    }
+
+    
+    });
+
+
+
+        // toutes les 15millisecondes je lance ma fonction descriptionCreation qui permet d'ajouter lettre par lettre ma description
+
+        setInterval(descriptionCreation1, 15);
+
+
+    
+        function descriptionCreation1(){
+         
+            
+        
+         let textDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe ipsa doloremque earum quibusdam, consequatur repellendus, quasi eveniet corrupti maxime hic rem temporibus laudantium";
+                
+        // si la longueur de ma description écrite est inferieur à la longueur du texte total
+                if(descriptions1[i].innerText.length < textDescription.length){
+                // l'index de depart utilisé est égal à la longueur de ma description (si je change de div dans la carrousel l'index a pu
+                // être réinitialisé)
+                    indexDescription1 = descriptions1[i].innerHTML.length;
+        
+                    // j'injecte dans ma description les lettre correspondante
+                    descriptions1[i].innerHTML += textDescription[indexDescription1];
+                   
+ 
+                }
         }
+
 
        
-        for(let i=0; i < prenoms.length; i++){
-            prenoms[i].style.left = prenoms_left.toString() + '%';
-            ages[i].style.left = age_left.toString() + '%';
-            
-        }
-// pour chaque lettre de chaque paragraphe j'ajoute une classe 
 
+
+// carroussel 2
+
+
+
+
+const flecheDroite2 = document.querySelector('#fleche_droite2');
+const flecheGauche2 = document.querySelector('#fleche_gauche2');
+const cards2 = document.querySelectorAll('.card2');
+const prenoms2 = document.querySelectorAll('.prenom2');
+const ages2 = document.querySelectorAll('.age2');
+const descriptions2 = document.querySelectorAll('.description2');
+
+for(let i = 0; i < cards2.length; i++){
+    cards2[i].style.transition = 'all 0.5s ease';
+    prenoms2[i].style.transition = 'all 0.5s ease';
+    ages2[i].style.transition = 'all 0.5s ease';
+    descriptions2[i].style.transition = 'all 0.5s ease';
+}
+
+
+let j = 0;
+flecheDroite2.addEventListener('click', ()=>{
+    if(j < cards2.length - 1){
+        cards2[j].style.height = "0px";
+        cards2[j].style.marginRight = "0px";
+        ages2[j].style.fontSize = "0px";
+        prenoms2[j].style.fontSize = "0px";
+        descriptions2[j].style.fontSize = "0px";
+        
+
+        j++;
     }
-}
 
-function left_move(){
-        // si la position right de mes images est supérieur à 0% alors lorsque je clique sur la fleche droite on enlève 105%
-        if(right_movee > 0){
-            right_movee -= 85;
-            carrousel.style.right = right_movee.toString() + '%';
-            paragraphes1.style.right = right_movee.toString() + '%';
-            if(prenoms_left < 20){
-                prenoms_left += 45;
-                age_left -= 30;
-            }else{
-                prenoms_left -= 45;
-                age_left += 30;
-            }
+});
+
+// si je clique 1 fois sur la fleche gauche, alors la height de ma div devient initial, si je clique 2 fois sur la fleche, la width de la div 2 devient initial, ...
+
+
+
+flecheGauche2.addEventListener('click', ()=>{
+    if(j > 0){
+        j--;
+        cards2[j].style.height = "100%";
+        cards2[j].style.marginRight = "15px";
+        ages2[j].style.fontSize = "1.2em";
+    prenoms2[j].style.fontSize = "1.6em";
+    descriptions2[j].style.fontSize = "0.8em";
+    }
+
     
+    });
+
+
+        // toutes les 15millisecondes je lance ma fonction descriptionCreation qui permet d'ajouter lettre par lettre ma description
+
+setInterval(descriptionCreation2, 15);
+
+
+    
+function descriptionCreation2(){
+ 
+    
+
+ let textDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe ipsa doloremque earum quibusdam, consequatur repellendus, quasi eveniet corrupti maxime hic rem temporibus laudantium";
+        
+// si la longueur de ma description écrite est inferieur à la longueur du texte total
+        if(descriptions2[j].innerText.length < textDescription.length){
+        // l'index de depart utilisé est égal à la longueur de ma description (si je change de div dans la carrousel l'index a pu
+        // être réinitialisé)
+            indexDescription2 = descriptions2[j].innerHTML.length;
+
+            // j'injecte dans ma description les lettre correspondante
+            descriptions2[j].innerHTML += textDescription[indexDescription2];
            
-            for(let i=0; i < prenoms.length; i++){
-                prenoms[i].style.left = prenoms_left.toString() + '%';
-                ages[i].style.left = age_left.toString() + '%';
-                
-            }
-            
+
         }
 }
-// variables carrousel 2
 
 
-const fleche_gauche2 = document.getElementById('fleche_gauche2');
-const fleche_droite2 = document.getElementById('fleche_droite2');
-const carrousel2 = document.getElementById('images_carrousel2');
-const paragraphes2 = document.getElementsByClassName('paragraphes_carrousel2')[0];
-const prenoms2 = document.getElementsByClassName('prenom2');
-const ages2 = document.getElementsByClassName('age2');
-let prenoms_left2 = 15;
-let age_left2 = 50;
-let right_movee2 = 0;
-fleche_droite2.addEventListener('click', right_move2);
-fleche_gauche2.addEventListener('click', left_move2);
 
-// 2ème carrousel
+// carroussel 3
 
-function right_move2(){
 
-    // si la position right de mes images est inferieur à 630% alors lorsque je clique sur la fleche droite on ajoute 105%
-    if(right_movee2 < 425){
-        right_movee2 += 85;
-        carrousel2.style.right = right_movee2.toString() + '%';
-        paragraphes2.style.right = right_movee2.toString() + '%';
-        if(prenoms_left2 < 20){
-            prenoms_left2 += 45;
-            age_left2 -= 30;
-        }else{
-            prenoms_left2 -= 45;
-            age_left2 += 30;
-        }
 
+
+const flecheDroite3 = document.querySelector('#fleche_droite3');
+const flecheGauche3 = document.querySelector('#fleche_gauche3');
+const cards3 = document.querySelectorAll('.card3');
+const prenoms3 = document.querySelectorAll('.prenom3');
+const ages3 = document.querySelectorAll('.age3');
+const descriptions3 = document.querySelectorAll('.description3');
+
+for(let i = 0; i < cards3.length; i++){
+    cards3[i].style.transition = 'all 0.5s ease';
+    prenoms3[i].style.transition = 'all 0.5s ease';
+    ages3[i].style.transition = 'all 0.5s ease';
+    descriptions3[i].style.transition = 'all 0.5s ease';
+}
+
+
+let k = 0;
+flecheDroite3.addEventListener('click', ()=>{
+    if(k < cards3.length - 1){
+        cards3[k].style.height = "0px";
+        cards3[k].style.marginRight = "0px";
+        ages3[k].style.fontSize = "0px";
+        prenoms3[k].style.fontSize = "0px";
+        descriptions3[k].style.fontSize = "0px";
+
+
+        k++;
+    }
+
+});
+
+// si je clique 1 fois sur la fleche gauche, alors la height de ma div devient initial, si je clique 2 fois sur la fleche, la width de la div 2 devient initial, ...
+
+
+
+flecheGauche3.addEventListener('click', ()=>{
+    if(k > 0){
+        k--;
+        cards3[k].style.height = "100%";
+        cards3[k].style.marginRight = "15px";
+        ages3[k].style.fontSize = "1.2em";
+    prenoms3[k].style.fontSize = "1.6em";
+    descriptions3[k].style.fontSize = "0.8em";
+    }
+
+    
+    });
+
+        // toutes les 15millisecondes je lance ma fonction descriptionCreation qui permet d'ajouter lettre par lettre ma description
+
+        setInterval(descriptionCreation3, 15);
+
+
+    
+        function descriptionCreation3(){
+         
+            
+        
+         let textDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum saepe ipsa doloremque earum quibusdam, consequatur repellendus, quasi eveniet corrupti maxime hic rem temporibus laudantium";
+                
+        // si la longueur de ma description écrite est inferieur à la longueur du texte total
+                if(descriptions3[k].innerText.length < textDescription.length){
+                // l'index de depart utilisé est égal à la longueur de ma description (si je change de div dans la carrousel l'index a pu
+                // être réinitialisé)
+                    indexDescription3 = descriptions3[k].innerHTML.length;
+        
+                    // j'injecte dans ma description les lettre correspondante
+                    descriptions3[k].innerHTML += textDescription[indexDescription3];
+                   
        
-        for(let i=0; i < prenoms2.length; i++){
-            prenoms2[i].style.left = prenoms_left2.toString() + '%';
-            ages2[i].style.left = age_left2.toString() + '%';
-            
+                }
         }
 
-        
-        
-    }
-}
-
-function left_move2(){
-        // si la position right de mes images est supérieur à 0% alors lorsque je clique sur la fleche droite on enlève 105%
-        if(right_movee2 > 0){
-            right_movee2 -= 85;
-            carrousel2.style.right = right_movee2.toString() + '%';
-            paragraphes2.style.right = right_movee2.toString() + '%';
-            if(prenoms_left2 < 20){
-                prenoms_left2 += 45;
-                age_left2 -= 30;
-            }else{
-                prenoms_left2 -= 45;
-                age_left2 += 30;
-            }
-    
-           
-            for(let i=0; i < prenoms2.length; i++){
-                prenoms2[i].style.left = prenoms_left2.toString() + '%';
-                ages2[i].style.left = age_left2.toString() + '%';
-                
-            }
-            
-        }
-}
-
-// variables carrousel 3
 
 
-const fleche_gauche3 = document.getElementById('fleche_gauche3');
-const fleche_droite3 = document.getElementById('fleche_droite3');
-const carrousel3 = document.getElementById('images_carrousel3');
-const paragraphes3 = document.getElementsByClassName('paragraphes_carrousel3')[0];
-const prenoms3 = document.getElementsByClassName('prenom3');
-const ages3 = document.getElementsByClassName('age3');
-let prenoms_left3 = 15;
-let age_left3 = 50;
-let right_movee3 = 0;
-fleche_droite3.addEventListener('click', right_move3);
-fleche_gauche3.addEventListener('click', left_move3);
-
-// 2ème carrousel
-
-function right_move3(){
-
-    // si la position right de mes images est inferieur à 630% alors lorsque je clique sur la fleche droite on ajoute 105%
-    if(right_movee3 < 425){
-        right_movee3 += 85;
-        carrousel3.style.right = right_movee3.toString() + '%';
-        paragraphes3.style.right = right_movee3.toString() + '%';
-        if(prenoms_left3 < 20){
-            prenoms_left3 += 45;
-            age_left3 -= 30;
-        }else{
-            prenoms_left3 -= 45;
-            age_left3 += 30;
-        }
-
-       
-        for(let i=0; i < prenoms3.length; i++){
-            prenoms3[i].style.left = prenoms_left3.toString() + '%';
-            ages3[i].style.left = age_left3.toString() + '%';
-            
-        }
-        
-    }
-}
-
-function left_move3(){
-        // si la position right de mes images est supérieur à 0% alors lorsque je clique sur la fleche droite on enlève 105%
-        if(right_movee3 > 0){
-            right_movee3 -= 85;
-            carrousel3.style.right = right_movee3.toString() + '%';
-            paragraphes3.style.right = right_movee3.toString() + '%';
-            if(prenoms_left3 < 20){
-                prenoms_left3 += 45;
-                age_left3 -= 30;
-            }else{
-                prenoms_left3 -= 45;
-                age_left3 += 30;
-            }
-    
-           
-            for(let i=0; i < prenoms3.length; i++){
-                prenoms3[i].style.left = prenoms_left3.toString() + '%';
-                ages3[i].style.left = age_left3.toString() + '%';
-                
-            }
-        }
-}
 
 
-// Animation icone Menu *************************************************************************************************
+
+
+
+
+    // Animation icone Menu *************************************************************************************************
 
 const all_trait = document.getElementsByClassName('icone_head')[0];
 const trait1 = document.getElementsByClassName('trait1')[0];
@@ -217,14 +265,18 @@ all_trait.addEventListener('click', animation_trait);
 function animation_trait(){
     all_trait.style.width = '100%';
     all_trait.style.height = '5em';
-    all_trait.style.paddingTop = '1.8em';
-    trait1.style.width = '100%';
-    
-    trait2.style.width = '0';
-  
+   
+    trait1.style.height = '0px';
+    trait1.style.opacity = '0';
+    trait1.style.transition = 'all 1s ease';
+
+    trait2.style.height = '0px';
     trait2.style.opacity = '0';
+    trait2.style.transition = 'all 1s ease';
+
+    trait3.style.transition = 'all 1s ease';
     trait3.style.width = '100%';
-    trait3.style.marginTop = '1.5em';
+    trait3.style.marginTop = '0.5em';
 
     text.style.transition = 'all 1s ease';
     text.style.width = '100%';
@@ -235,7 +287,3 @@ function animation_trait(){
 
 
 }
-
-
-
-

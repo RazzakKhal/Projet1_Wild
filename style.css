@@ -3,7 +3,7 @@
 
 
 html{
-    height : 100vh;
+
     --primary-color : #9FBBCC;
     --secondary-color : #FFFD98;
     --primary-font : 'Montserrat', sans-serif;
@@ -11,7 +11,7 @@ html{
 }
 
 body{
-    height : 100%;
+    min-height : 30vh;
 }
 
 
@@ -45,7 +45,7 @@ header{
     position : absolute;
     z-index : 2;
     background-color: white;
-    top : 9em;
+    top : 10.5em;
     left : 0px;
 }
 
@@ -69,8 +69,10 @@ font-weight: 100;
 }
 
 .icone_head{
+    position: relative;
     box-sizing: border-box;
-    margin-top : 3em;
+    /* margin-top : 3em; */
+    top : 75px;
     width : 3em;
     height : 3em;
     transition : all 1s ease 0s;
@@ -87,6 +89,7 @@ font-weight: 100;
     white-space: nowrap;
     opacity: 1;
     font-family: var(--primary-font);
+    text-align: center;
     
 
 }
@@ -97,7 +100,6 @@ font-weight: 100;
     width : 85%;
     border-top: 3px solid black;
     position: relative;
-    transition : 1s ease;
     margin-bottom : 8px;
 
 }
@@ -105,8 +107,7 @@ font-weight: 100;
 .trait2{
     width : 60%;
     border-top: 3px solid black;
-    position: relative;
-    transition : 1s ease;
+    position: relative;  
     margin-bottom : 8px;
 
     
@@ -116,7 +117,7 @@ font-weight: 100;
     width : 30%;
     border-top: 3px solid black;
     position: relative;
-    transition : 1s ease;
+   
 }
 
 
@@ -126,8 +127,10 @@ font-weight: 100;
 main{
     min-height : 30vh;
     background-color : var(--primary-color);
-    height : 250vh;
+    padding-bottom : 2em;
     padding-top : 2em;
+    padding-left : 5px;
+    padding-right: 5px;
 }
 
 .fleche_droite{
@@ -154,8 +157,8 @@ main{
     }
 
 .carrousel1{
-    height : 30%;
-    width : 90%;
+    display : flex;
+    height : 80vh;  
     margin : 0 auto;
     border-radius: 10px;
     background-color : var(--secondary-color);
@@ -167,8 +170,8 @@ main{
 }
 
 .carrousel2{
-    height : 30%;
-    width : 90%;
+    display : flex;
+    height : 80vh;  
     margin : 0 auto;
     border-radius: 10px;
     background-color : var(--secondary-color);
@@ -182,8 +185,8 @@ main{
 
 
 .carrousel3{
-    height : 30%;
-    width : 90%;
+    display : flex;
+    height : 80vh;
     margin : 0 auto;
     border-radius: 10px;
     background-color : var(--secondary-color);
@@ -193,308 +196,51 @@ main{
     position:relative;
 }
 
-#images_carrousel1{
+
+/* travail de refonte du carrousel */
+
+
+.card{
+    position: relative;
+   height : 100%;
+   margin-right : 15px;
+}
+
+.card img{
     height : 60%;
-   
-    display: flex;
-    position: relative;
-    right : 0%;
-    transition: right 1s ease;
-    
+    border-radius: 5%;
 }
 
-#images_carrousel1 img{
-    margin-right : 1em;
-    border-radius: 10px;
-    max-width : 100%;
-}
-
-
-#images_carrousel2{
-    height : 60%;
-   
-    display: flex;
-    position: relative;
-    right : 0%;
-    transition: right 1s ease;
-    
-}
-
-#images_carrousel2 img{
-    margin-right : 1em;
-    border-radius: 10px;
-    max-width : 100%;
-}
-
-
-#images_carrousel3{
-    height : 60%;
-   
-    display: flex;
-    position: relative;
-    right : 0%;
-    transition: right 1s ease;
-    
-}
-
-#images_carrousel3 img{
-    margin-right : 1em;
-    border-radius: 10px;
-    max-width : 100%;
-}
-
-
-.paragraphes_carrousel1{
-    height : 40%;
-   width : 600%;
-    display: flex;
-    position: relative;
-    right : 0%;
-    transition: right 1s ease;
-}
-
-.paragraphes_carrousel1 div{
-    
-   
-    height : 100%;
-   width : 100%;
-   
-}
-
-
-
-
-.paragraphes_carrousel2{
-    height : 40%;
-    width : 600%;
-     display: flex;
-     position: relative;
-     right : 0%;
-     transition: right 1s ease;
-}
-
-.paragraphes_carrousel2 div{
-    
-   
-    height : 100%;
-   width : 100%;
-   
-}
-
-.paragraphes_carrousel3{
-    height : 40%;
-    width : 600%;
-     display: flex;
-     position: relative;
-     right : 0%;
-     transition: right 1s ease;
-}
-
-.paragraphes_carrousel3 div{
-    
-   
-    height : 100%;
-   width : 100%;
-    
-}
-
-.prenom{
-    position: relative;
-top : 10%;
-left : 15%;
-font-family: var(--primary-font);
-font-size: 1.6em;
-transition: left 1s ease;
-}
-
-.age{
-    position: relative;
-    top : 30%;
-    left: 50%;
+.card .prenom{
+        position: absolute;
+    bottom : 30%;
+    left : 3%;
     font-family: var(--primary-font);
     font-size: 1.6em;
     transition: left 1s ease;
-}
-
-.description{
-    position: relative;
-    top : 20%;
-    font-family: var(--primary-font);
-    font-size : 0.8em;
+ 
+  
     
 }
 
-.apparition1{
-opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 125ms;
-    animation-fill-mode: both;
+.card .description{
+    position: absolute;
+    bottom : 12%;
+    font-family: var(--primary-font);
+    font-size : 0.8em;
 }
 
-.apparition2{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 250ms;
-    animation-fill-mode: both;
+.card .age{
+    /* color : red; */
+    position : absolute;
+    bottom : 3%;
+    right : 10%;
+    font-family: var(--primary-font);
+    font-size: 1.2em;
 }
 
-.apparition3{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 375ms;
-    animation-fill-mode: both;
-}
 
-.apparition4{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 500ms;
-    animation-fill-mode: both;
-}
-.apparition5{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 750ms;
-    animation-fill-mode: both;
-}
-.apparition6{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 1000ms;
-    animation-fill-mode: both;
-}
-.apparition7{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 1250ms;
-    animation-fill-mode: both;
-}
-.apparition8{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 1500ms;
-    animation-fill-mode: both;
-}
-.apparition9{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 1750ms;
-    animation-fill-mode: both;
-}
-.apparition10{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 2000ms;
-    animation-fill-mode: both;
-}
-.apparition11{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 2250ms;
-    animation-fill-mode: both;
-}
-.apparition12{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 2500ms;
-    animation-fill-mode: both;
-}
-.apparition13{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 2750ms;
-    animation-fill-mode: both;
-}
-.apparition14{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 3000ms;
-    animation-fill-mode: both;
-}
-.apparition15{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 3250ms;
-    animation-fill-mode: both;
-}
-.apparition16{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 3500ms;
-    animation-fill-mode: both;
-}
-.apparition17{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 3750ms;
-    animation-fill-mode: both;
-}
-.apparition18{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 4000ms;
-    animation-fill-mode: both;
-}
-.apparition19{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 4250ms;
-    animation-fill-mode: both;
-}
-.apparition20{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 4500ms;
-    animation-fill-mode: both;
-}
-.apparition21{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 4750ms;
-    animation-fill-mode: both;
-}
-.apparition22{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 5000ms;
-    animation-fill-mode: both;
-}
-.apparition23{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 5250ms;
-    animation-fill-mode: both;
-}
-.apparition24{
-    opacity : 0;
-    animation-name: apparition;
-    animation-duration: 1s;
-    animation-delay: 5500ms;
-    animation-fill-mode: both;
-} 
+
 
 
 /* footer css ******************************************************************************************************/
@@ -524,3 +270,134 @@ footer{
 
 
 }
+
+
+
+
+/* Mediaqueries *********************************************************************************************** */
+
+
+/* Ecrans tablettes */
+
+@media screen and (min-width : 768px){
+
+/* header */
+
+    .ellipse_head{
+        display : none;
+    }
+
+    .fond_head{
+        height: 80%;
+        overflow: hidden;
+    }
+
+    .photo_head{
+        height : 120%;
+    }
+
+    .icone_head{
+        top : 20px;
+    }
+
+
+
+}
+
+/* Portable format paysage */
+
+@media screen and (max-height : 350px){
+       /* header */
+     
+        
+    
+       header{
+        height : 75vh;
+       }
+       .ellipse_head{
+        display : none;
+    }
+
+    
+       .fond_head{
+        height: 80%;
+        overflow: hidden;
+    }
+
+    .photo_head{
+            
+        background-image: url('images/classe.png');
+       width : 100%;
+       height : 100%;
+    }
+
+    .icone_head{
+        top : 5px;
+    }
+
+      
+    /* corps */
+
+    main{
+        min-height: 15vh;
+       }
+
+    .description{
+        display : none;
+    }
+
+    .card .prenom{
+        bottom : 23%;
+    }
+
+
+}
+
+
+
+/* Ecran tablettes paysage */
+
+@media screen and (min-width : 992px){
+
+    /* header */
+ 
+    header{
+        padding : 0px;
+    }
+
+        .photo_head{
+            
+            background-image: url('images/classe.png');
+           width : 98%;
+        }
+    
+.icone_head{
+    padding-left: 10px;
+}
+    }
+    
+    /* Ecran PC */
+
+@media screen and (min-width : 1200px){
+
+        /* header */
+     
+        
+    
+           header{
+            height : 75vh;
+           }
+
+           main{
+            min-height: 15vh;
+           }
+           .photo_head{
+            
+            background-image: url('images/classe.png');
+        
+        }
+    
+          
+    
+        }
+        
