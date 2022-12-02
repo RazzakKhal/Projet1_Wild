@@ -307,3 +307,19 @@ footer{
     }
 
 }
+
+@media screen and (min-width : 992px){
+
+    /* header */
+ 
+    
+
+        .photo_head{
+            
+            background-image: url('images/classe.png');
+           width : 98%;
+        }
+    
+
+    }
+    
